@@ -1,18 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import SessionJoin from './pages/SessionJoin';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Amplify } from 'aws-amplify';
-import awsExports from './aws-exports';
+import { Amplify } from 'aws-amplify'
+import awsExports from './aws-exports'
+
+import './index.css'
+import SessionJoin from './pages/SessionJoin'
+import Admin from './pages/Admin'
+import reportWebVitals from './reportWebVitals'
+import AdminProtectedRoute from './components/AdminProtectedRoute'
 
 Amplify.configure(awsExports);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SessionJoin />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<SessionJoin />} />
+        <Route path='/admin' element={
+          <AdminProtectedRoute element={<Admin />} redirect='/' />
+        } />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

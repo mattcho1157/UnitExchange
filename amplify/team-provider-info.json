@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-unitexchange-dev-184939-authRole",
+      "UnauthRoleArn": "arn:aws:iam::308739251620:role/amplify-unitexchange-dev-184939-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::308739251620:role/amplify-unitexchange-dev-184939-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-unitexchange-dev-184939-deployment",
+      "UnauthRoleName": "amplify-unitexchange-dev-184939-unauthRole",
+      "StackName": "amplify-unitexchange-dev-184939",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:308739251620:stack/amplify-unitexchange-dev-184939/1fceaea0-b5aa-11ed-81fd-068d144e4ad6",
+      "AmplifyAppId": "drepi4r8vssx7"
+    },
+    "categories": {
+      "api": {
+        "unitexchange": {}
+      }
+    }
+  }
+}

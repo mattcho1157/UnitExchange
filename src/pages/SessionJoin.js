@@ -37,7 +37,7 @@ const SessionJoin = () => {
               label='ALIAS'
               type='text'
               value={alias}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setAlias(e.target.value)}
             />
             <TextField 
               label='SESSION PIN'
